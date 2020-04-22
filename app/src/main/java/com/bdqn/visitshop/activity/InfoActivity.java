@@ -33,7 +33,7 @@ import okhttp3.Request;
  */
 public class InfoActivity extends BaseActivity {
     private final String VISITSHOP = "InfoActivity";
-    private XRecyclerView mRecyclerView;
+    private XRecyclerView mRecyclerView;  
     private final int HANDLERCODEFIRST = 100;
     private final int HANDLERCODEREFUSH = 101;
     private final int HANDLERCODELOADMORE = 102;
