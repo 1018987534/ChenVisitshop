@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="testlitepal" ></dbname><!--dbname节点 就是数据库名字-->
+
+    <version value="1" ></version><!--版本号-->
+
+    <list><!--配置你需要映射的实体类 定义相关的属性 -->
+        <mapping class="com.bdqn.visitshop.bean.AnnImgs"></mapping>
+        <mapping class="com.bdqn.visitshop.bean.DateList"></mapping>
+        <mapping class="com.bdqn.visitshop.bean.InfoResultBody"></mapping>
+        <mapping class="com.bdqn.visitshop.bean.InterviewResultBody"></mapping>
+        <mapping class="com.bdqn.visitshop.bean.ShopList"></mapping>
+        <mapping class="com.bdqn.visitshop.bean.TaskBody"></mapping>
+        <mapping class="com.bdqn.visitshop.bean.User"></mapping>
+        <mapping class="com.bdqn.visitshop.bean.TrainListBody"></mapping>
+    </list>
+</litepal>

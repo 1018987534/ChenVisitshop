@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout"
+    android:background="@color/colorAccent"
+    tools:context="com.bdqn.visitshop.activity.PhotoActivity">
+    <include layout="@layout/title_bar_activity"
+             android:id="@+id/title_up_layout" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_up_layout"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/photo_head_right"
+            android:paddingLeft="@dimen/photo_head_left"
+            android:paddingTop="@dimen/photo_head_left"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/notification"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/photo_help_text"
+                android:textColor="@color/bottom_text_color"
+                android:textSize="@dimen/home_fragment_info_item_size"
+                />
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/photo_gallery_left"
+            android:layout_marginRight="@dimen/photo_gallery_left"
+            android:layout_marginBottom="@dimen/photo_gallery_bottom"
+            android:layout_marginTop="@dimen/photo_gallery_top"
+            android:scrollbars="none">
+            <LinearLayout
+                android:id="@+id/photo_activity_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                />
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/photo_activity_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/photo_head_right"
+            android:layout_marginRight="@dimen/photo_head_right"
+            android:background="@drawable/shape_corner_bule"
+            android:text="拍    照"/>
+    </LinearLayout>
+
+</RelativeLayout>

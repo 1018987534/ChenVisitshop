@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/root_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorAccent"
+              android:orientation="vertical"
+              tools:context="com.bdqn.visitshop.activity.InterviewDetailActivity">
+
+    <include layout="@layout/title_bar_activity"></include>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/Interview_Detail_Layout">
+
+                <TextView
+                    style="@style/Interview_Text_Left"
+                    android:text="@string/activity_interviewdetail_tv_title"/>
+
+                <EditText
+                    android:id="@+id/et_title"
+                    android:maxLines="2"
+                    style="@style/Interview_Text_Right"
+                    android:hint="@string/activity_interviewdetail_tv_title_hint"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Interview_Detail_Layout">
+
+                <TextView
+                    style="@style/Interview_Text_Left"
+                    android:text="@string/activity_interviewdetail_tv_people"/>
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/Interview_Text_Right"
+                    android:hint="@string/activity_interviewdetail_tv_people_hint"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Interview_Detail_Layout">
+
+                <TextView
+                    style="@style/Interview_Text_Left"
+                    android:text="@string/activity_interviewdetail_tv_phone"/>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    style="@style/Interview_Text_Right"
+                    android:hint="@string/activity_interviewdetail_tv_phone_hint"
+                    android:inputType="phone"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Interview_Detail_Layout">
+
+                <TextView
+                    style="@style/Interview_Text_Left"
+                    android:text="@string/activity_interviewdetail_tv_company"/>
+
+                <EditText
+                    android:id="@+id/et_company"
+                    style="@style/Interview_Text_Right"
+                    android:hint="@string/activity_interviewdetail_tv_company_hint"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Interview_Detail_Layout">
+
+                <TextView
+                    style="@style/Interview_Text_Left"
+                    android:text="@string/activity_interviewdetail_tv_job"/>
+
+                <EditText
+                    android:id="@+id/et_job"
+                    style="@style/Interview_Text_Right"
+                    android:hint="@string/activity_interviewdetail_tv_job_hint"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Interview_Detail_Layout">
+
+                <TextView
+                    style="@style/Interview_Text_Left"
+                    android:text="@string/activity_interviewdetail_tv_aim"/>
+
+                <EditText
+                    android:id="@+id/et_aim"
+                    style="@style/Interview_Text_Right"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/edit_bg"
+                    android:gravity="top"
+                    android:hint="@string/activity_interviewdetail_tv_aim_hint"
+                    android:inputType="textMultiLine"
+                    android:maxLines="50"
+                    android:minLines="1"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Interview_Detail_Layout"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    style="@style/Interview_Text_Left"
+                    android:text="@string/activity_interviewdetail_tv_summary"/>
+
+                <EditText
+                    android:id="@+id/et_summary"
+                    style="@style/Interview_Text_Right"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/edit_bg"
+                    android:gravity="top"
+                    android:hint="@string/activity_interviewdetail_tv_summary_hint"
+                    android:inputType="textMultiLine"
+                    android:maxLines="50"
+                    android:minLines="1"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_40"
+                android:layout_marginRight="@dimen/margin_40"
+                android:layout_marginBottom="@dimen/margin_40"
+                android:background="@mipmap/btn_bg"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_16"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

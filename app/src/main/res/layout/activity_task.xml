@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:context="com.bdqn.visitshop.activity.TaskActivity">
+
+    <include layout="@layout/title_bar_activity"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/lv_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/title_bar_add_right"
+            android:paddingLeft="@dimen/bottom_img_left"
+            android:scrollbars="none"/>
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/progressbar_custom_rl"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/refush"
+            layout="@layout/http_failed_refrensh"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

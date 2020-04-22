@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.bdqn.visitshop.activity.MainActivity1">
+    <include layout="@layout/title_bar_activity"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <ListView
+        android:id="@+id/msg_list_view"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:transcriptMode="normal"
+        android:divider="#0000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="输入你想说的话"
+            android:maxLines="2"/>
+        <Button
+            android:id="@+id/send"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="发送"/>
+
+    </LinearLayout>
+    </LinearLayout>
+        <include
+            android:id="@+id/loading"
+            layout="@layout/progressbar_custom_rl"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

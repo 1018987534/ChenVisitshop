@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_root_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/shop_activity_item_padding"
+        android:layout_marginBottom="@dimen/train_fragment_item_img_bottom"
+        android:id="@+id/fragment_visit_item_img"
+        android:layout_marginRight="8dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/selector_train_list_bg"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/fragment_visit_item_img"
+        android:layout_toLeftOf="@+id/fragment_visit_item_arrow"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/fragment_visit_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/shop_activity_item_padding"
+            android:text="培训名称:常规销售技巧培训"
+            android:singleLine="true"
+            android:textColor="@color/bottom_text_color"
+            android:textSize="@dimen/home_fragment_info_item_size"/>
+        <TextView
+            android:id="@+id/frament_visit_item_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/shop_activity_item_top"
+            android:layout_marginBottom="@dimen/train_fragment_item_bottom"
+            android:text="培训编号:"
+            android:singleLine="true"
+            android:textColor="@color/shop_item_text_color"
+            android:textSize="@dimen/home_fragment_item_size"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_visit_item_arrow"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/selector_item_img"/>
+
+    <View
+        android:id="@+id/item_home_task"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_bg"/>
+
+</RelativeLayout>

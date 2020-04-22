@@ -1,0 +1,153 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Interview_Text_Left">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color_6</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+    </style>
+
+    <style name="Interview_Text_Right">
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_10</item>
+        <item name="android:layout_marginRight">@dimen/margin_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/text_color_6</item>
+        <item name="android:textSize">@dimen/textsize_16</item>
+    </style>
+
+    <style name="Interview_Detail_Layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginLeft">@dimen/margin_23</item>
+        <item name="android:layout_marginTop">@dimen/margin_28</item>
+    </style>
+
+
+    <style name="Me_RelLayout_Img_Left">
+        <item name="android:layout_marginLeft">@dimen/margin_10</item>
+        <item name="android:layout_width">@dimen/margin_30</item>
+        <item name="android:layout_height">@dimen/margin_30</item>
+    </style>
+
+    <style name="Me_Line">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/menu_item_pressed</item>
+    </style>
+
+    <!--  popwindow显示和消失动画 -->
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item><!--展示的动画-->
+        <item name="android:windowExitAnimation">@anim/pophidden_anim</item><!--消失的动画-->
+    </style>
+
+    <style name="MeData_layout">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MeData_Text_Left">
+        <item name="android:layout_width">@dimen/margin_70</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_16</item>
+        <item name="android:padding">@dimen/margin_10</item>
+        <item name="android:textColor">@color/text_color_6</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+    </style>
+
+    <style name="MeData_Text_Right">
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/margin_16</item>
+        <item name="android:layout_marginLeft">@dimen/margin_5</item>
+        <item name="android:padding">@dimen/margin_10</item>
+        <item name="android:textColor">@color/text_color_9</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+    </style>
+
+    <style name="MeData_Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/margin_5</item>
+        <item name="android:layout_marginRight">@dimen/margin_16</item>
+    </style>
+
+    <style name="Retist_Layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/regist_text_marginleft</item>
+        <item name="android:layout_marginTop">@dimen/regist_text_margintop</item>
+    </style>
+
+    <style name="Regist_Text_Left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/regist_text_size</item>
+        <item name="android:textColor">@color/regist_text_color</item>
+    </style>
+
+    <style name="Regist_Edit">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/regist_text_hintcolor</item>
+        <item name="android:textColor">@color/regist_text_color</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="Task_Detail_Layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_30</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="TaskDetail_Text_Left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_23</item>
+        <item name="android:textColor">@color/taskdetail_text_color</item>
+        <item name="android:textSize">@dimen/task_detail_textsize_left</item>
+    </style>
+
+    <style name="TaskDetail_Text_Right">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/task_detail_text_marginleft</item>
+        <item name="android:textColor">@color/taskdetail_text_color</item>
+        <item name="android:textSize">@dimen/task_detail_textsize_right</item>
+    </style>
+
+    <!--ratingbar-->
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_custom</item>
+        <item name="android:dividerHeight">16dp</item>
+        <item name="android:dividerPadding">16dp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:maxHeight">32dp</item>
+    </style>
+</resources>

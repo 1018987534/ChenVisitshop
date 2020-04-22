@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_10">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/popwindow_update_tv_title"
+        android:textColor="@color/bottom_all_bg_color_pressed"
+        android:textSize="@dimen/textsize_22" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@color/color_sanling" />
+
+    <TextView
+        android:id="@+id/tv_updateinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:textColor="@color/translucent"
+        android:paddingRight="@dimen/margin_10"
+        android:text="1:新增拜访模块 \n2:新增培训模块"
+        android:textSize="@dimen/textsize_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@color/color_sanling" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/bottom_all_bg_color_pressed"
+            android:text="@string/popwindow_update_btn_later"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_weight="1"
+            android:background="@color/bottom_all_bg_color_pressed"
+            android:text="@string/popwindow_update_btn_update"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

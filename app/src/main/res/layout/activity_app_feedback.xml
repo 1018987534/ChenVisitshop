@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/root_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorAccent"
+              android:orientation="vertical"
+              tools:context="com.bdqn.visitshop.activity.AppFeedbackActivity">
+
+    <include layout="@layout/title_bar_activity"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_13"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:padding="@dimen/margin_10"
+                    android:text="@string/activity_appfeedback_tv_tip"
+                    android:textColor="@color/text_color_6"
+                    android:textSize="@dimen/textsize_14"/>
+
+                <EditText
+                    android:id="@+id/et_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_23"
+                    android:layout_marginRight="@dimen/margin_23"
+                    android:layout_marginTop="@dimen/margin_23"
+                    android:background="@mipmap/edit_bg"
+                    android:gravity="top"
+                    android:hint="@string/activity_appfeedback_et_tip"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/margin_6"
+                    android:textColor="@color/text_color_6"
+                    android:textColorHint="@color/text_color_6"
+                    android:textSize="@dimen/textsize_14"/>
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_30"
+                    android:layout_marginRight="@dimen/margin_30"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:background="@mipmap/btn_bg"
+                    android:text="@string/activity_appfeedback_btn_submit"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_13"
+                    android:layout_marginTop="@dimen/margin_43"
+                    android:padding="@dimen/margin_10"
+                    android:text="@string/activity_appfeedback_tv_other"
+                    android:textColor="@color/text_color_6"
+                    android:textSize="@dimen/textsize_12"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_25"
+                        android:drawableLeft="@mipmap/kefu_phone"
+                        android:drawablePadding="@dimen/margin_8"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_10"
+                        android:text="客服热线 : "
+                        android:textColor="@color/text_color_9"
+                        android:textSize="@dimen/textsize_12"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_10"
+                        android:text="17348845520"
+                        android:textColor="@color/text_color_6"
+                        android:textSize="@dimen/textsize_14"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_25"
+                        android:drawableLeft="@mipmap/kefu_email"
+                        android:drawablePadding="@dimen/margin_8"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_10"
+                        android:text="客服邮箱 : "
+                        android:textColor="@color/text_color_9"
+                        android:textSize="@dimen/textsize_12"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_10"
+                        android:text="menghuandeyao@163.com"
+                        android:textColor="@color/text_color_6"
+                        android:textSize="@dimen/textsize_14"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/progressbar_custom_rl"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

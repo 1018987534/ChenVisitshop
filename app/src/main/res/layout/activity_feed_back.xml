@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout"
+    android:background="@color/colorAccent"
+    tools:context="com.bdqn.visitshop.activity.FeedBackActivity">
+
+    <include layout="@layout/title_bar_activity"
+             android:id="@+id/title_up_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_up_layout"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/feedback_head_left"
+            android:paddingLeft="@dimen/feedback_head_left"
+            android:paddingBottom="@dimen/feedback_head_bottom"
+            android:paddingRight="@dimen/photo_head_right"
+            >
+            <TextView
+                android:id="@+id/activity_train_manage_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/home_fragment_item_size"
+                android:textColor="@color/bottom_text_color"
+                android:layout_marginRight="@dimen/feedback_start_left"
+                android:text="@string/activity_train_detil_score"/>
+            <RatingBar
+                android:id="@+id/activity_train_edit_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/roomRatingBar"
+                android:layout_centerVertical="true"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1"
+                android:isIndicator="false"
+                android:layout_toRightOf="@+id/activity_train_manage_score"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_feedback_edit_h"
+            android:layout_marginRight="@dimen/feedback_head_left"
+            android:layout_marginLeft="@dimen/feedback_edit_left"
+            android:padding="@dimen/feedback_edit_padding"
+            android:gravity="center"
+            android:background="@mipmap/text_input_bg">
+            <EditText
+                android:id="@+id/activity_train_edit_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="1000"
+                android:lineSpacingExtra="@dimen/shop_activity_item_top"
+                android:focusableInTouchMode="true"
+                android:gravity="top|left"
+                android:hint="请输入你对培训的意见和建议，不超过1000字"
+                android:textColorHint="@color/shop_create_text_color"
+                android:textSize="@dimen/home_fragment_info_item_size"
+                android:textColor="@color/bottom_text_color"
+                android:background="@color/white"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

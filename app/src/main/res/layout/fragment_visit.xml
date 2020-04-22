@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/lv_interview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/margin_23"
+        android:paddingRight="@dimen/margin_23"
+        android:scrollbars="none"/>
+
+    <TextView
+        android:id="@+id/fragment_interview_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/gray_bg"
+        android:gravity="center"
+        android:text="无拜访信息"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/home_fragment_info_item_size"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/message_fregment_progress"
+        layout="@layout/progressbar_custom_rl"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/refush"
+        layout="@layout/http_failed_refrensh"
+        android:visibility="gone"/>
+</RelativeLayout>

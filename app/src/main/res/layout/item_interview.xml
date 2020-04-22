@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_23"
+        android:paddingBottom="@dimen/margin_23">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="订单标题："
+            android:textColor="@color/text_color_6"
+            android:textSize="@dimen/textsize_16" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_toRightOf="@+id/tv_title"
+            android:layout_toLeftOf="@+id/item_interview_img"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="2016-07-13"
+            android:textColor="@color/text_color_9"
+            android:textSize="@dimen/textsize_14" />
+
+
+        <ImageView
+            android:id="@+id/item_interview_img"
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="@dimen/margin_30"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_5"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_item_img" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/gray_bg"/>
+
+</LinearLayout>

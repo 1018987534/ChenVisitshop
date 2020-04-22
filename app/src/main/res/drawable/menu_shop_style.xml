@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--点击底部导航栏变色 按压下的状态  没有被选择的状态-->
+    <item android:state_pressed="true" android:state_selected="true" android:drawable="@mipmap/menu_shop_pressed"/>
+    <item android:state_pressed="true" android:state_selected="false" android:drawable="@mipmap/menu_shop_pressed"/>
+    <item android:state_pressed="false" android:state_selected="true" android:drawable="@mipmap/menu_shop_pressed"/>
+    <item android:state_pressed="false" android:state_selected="false" android:drawable="@mipmap/menu_shop_normal"/>
+</selector>

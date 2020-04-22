@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23//23
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.bdqn.visitshop"
+        minSdkVersion 18
+        targetSdkVersion 21//21
+        versionCode 3
+        versionName "3.1"
+    }
+    buildTypes {
+        release {
+            //混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    aaptOptions {
+
+        cruncherEnabled = false
+
+        useNewCruncher = false
+
+    }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'armeabi-v7a'
+            universalApk true
+        }
+    }
+    task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs") {
+        destinationDir file("$projectDir/libs")
+        baseName "Native_Libs2"
+        extension "jar"
+        from fileTree(dir: "libs", include: "**/*.so")
+        into "lib"
+    }
+    sourceSets {
+        main{
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []    //disable automatic ndk-build
+        }
+    }
+    productFlavors {
+    }
+}
+buildscript {
+    repositories {
+        maven { url 'http://repo1.maven.org/maven2' }
+        mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+    }
+}
+repositories {
+    maven { url 'http://repo1.maven.org/maven2' }
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
+    mavenCentral()
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+   // compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support:design:25.4.0'
+    //compile 'com.android.support:design:26.1.0'
+    compile files('libs/gson-2.2.4.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile project(':settingitemlibrary')
+    compile files('libs/litepal-1.5.1.jar')
+    compile project(':photoview')
+    compile files('libs/picasso-2.5.2.jar')
+    compile project(':xrecyclerview')
+    compile files('libs/okhttp-3.2.0.jar')
+    compile files('libs/okio-1.7.0.jar')
+}
+configurations.all {
+    resolutionStrategy.eachDependency { details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                //这里写你想统一的版本是多少，前提是你sdk里有
+                details.useVersion '25.0.0'
+            }
+        }
+    }
+}
+

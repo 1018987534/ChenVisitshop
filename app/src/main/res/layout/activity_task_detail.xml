@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:context="com.bdqn.visitshop.activity.TaskDetailActivity">
+
+    <include layout="@layout/title_bar_activity"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/Task_Detail_Layout">
+
+            <TextView
+                style="@style/TaskDetail_Text_Left"
+                android:text="@string/activity_taskdetail_tv_title" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:text="关于文件调研"
+                style="@style/TaskDetail_Text_Right" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Task_Detail_Layout">
+
+            <TextView
+                style="@style/TaskDetail_Text_Left"
+                android:text="@string/activity_taskdetail_tv_data" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/TaskDetail_Text_Right" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Task_Detail_Layout">
+
+            <TextView
+                style="@style/TaskDetail_Text_Left"
+                android:text="@string/activity_taskdetail_tv_state" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                style="@style/TaskDetail_Text_Right" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Task_Detail_Layout">
+
+            <TextView
+                style="@style/TaskDetail_Text_Left"
+                android:text="@string/activity_taskdetail_tv_desc" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                style="@style/TaskDetail_Text_Right" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

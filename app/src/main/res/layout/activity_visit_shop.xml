@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout"
+    android:background="@color/colorAccent"
+    tools:context="com.bdqn.visitshop.activity.VisitShopActivity">
+
+    <include layout="@layout/title_bar_activity"
+        android:id="@+id/title_up_layout" />
+
+    <TextView
+        android:id="@+id/fragment_visitshop_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="没有未完成信息"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/home_fragment_info_item_size"
+        android:layout_below="@id/title_up_layout"
+        android:background="@color/gray_bg"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_visitshop_list"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/bottom_img_left"
+        android:paddingRight="@dimen/title_bar_add_right"
+        android:layout_below="@+id/fragment_visitshop_none"
+        android:scrollbars="none"
+        android:background="@color/white"
+        />
+
+</RelativeLayout>
