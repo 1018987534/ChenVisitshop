@@ -30,6 +30,7 @@ import okhttp3.Request;
 
 /**
  * 资讯activity
+ * 陈德瑶
  */
 public class InfoActivity extends BaseActivity {
     private final String VISITSHOP = "InfoActivity";
